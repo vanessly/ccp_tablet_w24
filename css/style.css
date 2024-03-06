@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: "Inter";
+    background-color: #ffe2e6;
+    margin: 7%;
+    font-size: 20px;
+}
+
+img {
+    display: block;
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+h1, h2, h3 {
+    text-align: center;
+    padding: 2%;
+    font-size: 40px;
+}
+
+nav {
+    background-color: rgb(55, 54, 54);
+    width: 100%;
+    height: 6rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav > ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+}
+
+nav > ul > li {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    color: white;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+li {
+    margin-top: 6px;
+    display: list-item;
+    margin-left: 0;
+    font-size: 18px;
+}
+
+nav > ul > li.active {
+    background-color: #fff;
+    border: 1px solid #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 14px;
+}
+
+h1 { 
+    margin: 2rem;
+    font-size: large;
+}
+
+.skip-to-main {
+    position: absolute;
+    top: -500px;
+}
+
+.skip-to-main:focus {
+    top: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gallery {
+        animation: none;
+    }
+}
+
+/* Mobile Style */
+@media screen and (max-width: 600px) {
+    body {
+        text-align: center;
+        font-size: 16px;
+        margin: 5%;
+    }
+    .skip-to-main {
+        position: relative;
+        text-align: left;
+        top: -600px;
+    }
+
+    img {
+        width: 100%;
+        margin: 8px 4px;
+        border-radius: 8px;
+        display: block;
+        margin: auto;
+    }
+    ul {
+        margin-left: 12px;
+        list-style-type: circle;
+        padding-left: 24px;
+    }
+
+    li {
+        margin-top: 6px;
+        display: list-item;
+        margin-left: 0;
+        font-size: 18px;
+    }
+
+    nav {
+        text-align: right;
+    }
+
+    nav > ul > li {
+        margin: 8px 0;
+        font-size: 18px;
+    }
+
+    body > a {
+        display: inline-block;
+        margin: 12px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-gap: 12px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
